@@ -1,0 +1,55 @@
+{
+  "name": "image_services",
+  "version": "",
+  "description": "",
+  "author": "Micko Cabacungan",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "build": "webpack --watch -d",
+    "production": "webpack -p",
+    "seed": "node ./database/seeder.js",
+    "upload": "node ./database/cloud/uploadMedia.js",
+    "start": "nodemon ./server/index.js",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "mocha",
+    "deploy": "pm2 start ./server/index.js --watch"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "mongoose": "^5.9.19",
+    "prettier": "2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "styled-components": "^5.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "chai": "^4.2.0",
+    "cloudinary": "^1.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.1.0",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "pexels": "^1.0.1",
+    "prettier": "2.0.5",
+    "react-test-renderer": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
